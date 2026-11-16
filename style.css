@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+:root { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #17233c; background: #eef3fb; }
+body { margin: 0; min-height: 100vh; padding: 36px 16px; }
+.container { max-width: 760px; margin: 0 auto; }
+header { text-align: center; margin: 10px 0 26px; }
+.eyebrow { color: #2764d8; font-size: 12px; font-weight: 800; letter-spacing: 2px; }
+h1 { font-size: clamp(28px, 5vw, 42px); margin: 8px 0; }
+.subtitle { color: #65738b; line-height: 1.6; }
+.card { background: white; border-radius: 22px; padding: clamp(20px, 5vw, 36px); box-shadow: 0 12px 35px #1c37601a; }
+label { display: block; font-weight: 700; margin-bottom: 10px; }
+.input-row { display: flex; gap: 10px; }
+input { min-width: 0; flex: 1; border: 1px solid #d7e0ee; border-radius: 12px; padding: 15px; font-size: 16px; outline: none; }
+input:focus { border-color: #2764d8; box-shadow: 0 0 0 3px #2764d822; }
+button { border: 0; border-radius: 12px; padding: 13px 18px; background: #2764d8; color: white; font-weight: 700; font-size: 14px; cursor: pointer; }
+button:hover { filter: brightness(.95); }
+button.secondary { background: #eaf0fb; color: #2455a8; }
+.privacy, .small-note { font-size: 12px; line-height: 1.55; color: #718098; }
+.meter-heading { display: flex; justify-content: space-between; margin: 25px 0 9px; }
+#strengthLabel { font-weight: 800; color: #718098; }
+.meter { height: 11px; border-radius: 20px; background: #e9eef6; overflow: hidden; }
+#meterFill { height: 100%; width: 0; background: #e05a5a; transition: width .2s ease; }
+h2 { font-size: 18px; margin: 28px 0 12px; }
+.checks { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.checks li { background: #f5f7fb; padding: 11px 12px; border-radius: 10px; color: #68768d; font-size: 14px; }
+.checks li::before { content: "○"; color: #9aa8bd; font-weight: 900; margin-right: 8px; }
+.checks li.pass { color: #18794e; background: #effaf4; }
+.checks li.pass::before { content: "✓"; color: #15945a; }
+.feedback { margin-top: 18px; padding: 14px; border-radius: 12px; background: #f5f7fb; color: #53627a; line-height: 1.5; min-height: 48px; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.small-note { margin-top: 14px; }
+footer { text-align: center; color: #8995a8; font-size: 12px; padding: 22px; }
+@media (max-width: 560px) { .checks { grid-template-columns: 1fr; } .input-row { flex-direction: column; } .input-row button { width: 100%; } }

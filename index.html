@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="eyebrow">CYBERSECURITY MINI PROJECT</p>
+      <h1>Password Strength Analyzer</h1>
+      <p class="subtitle">Check password strength locally and learn how to create safer passwords.</p>
+    </header>
+
+    <section class="card">
+      <label for="password">Enter a sample password</label>
+      <div class="input-row">
+        <input id="password" type="password" placeholder="Type a password to analyze" autocomplete="off">
+        <button id="toggle" class="secondary" type="button">Show</button>
+      </div>
+      <p class="privacy">Privacy: analysis happens in this browser. Your input is not uploaded or saved. Do not enter a password you currently use.</p>
+
+      <div class="meter-heading">
+        <strong>Strength</strong>
+        <span id="strengthLabel">Not checked</span>
+      </div>
+      <div class="meter"><div id="meterFill"></div></div>
+
+      <h2>Security checklist</h2>
+      <ul id="checks" class="checks">
+        <li data-check="length">At least 12 characters</li>
+        <li data-check="lower">Contains a lowercase letter</li>
+        <li data-check="upper">Contains an uppercase letter</li>
+        <li data-check="number">Contains a number</li>
+        <li data-check="symbol">Contains a special character</li>
+        <li data-check="repeat">Avoids excessive repeated characters</li>
+        <li data-check="common">Is not a commonly used password</li>
+      </ul>
+      <div id="feedback" class="feedback" aria-live="polite">Enter a sample password to see feedback.</div>
+
+      <div class="actions">
+        <button id="generate" type="button">Generate a strong example</button>
+        <button id="clear" class="secondary" type="button">Clear</button>
+      </div>
+      <p class="small-note">Generated examples are created on your device using the browser's cryptographic random generator. Store real passwords in a reputable password manager.</p>
+    </section>
+
+    <footer>Built for learning • Password Strength Analyzer • HTML, CSS and JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
